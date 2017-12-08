@@ -3,6 +3,7 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Net;
 
 namespace HeartBeat
 {
@@ -21,15 +22,27 @@ namespace HeartBeat
             if (httpContext.Request.Path.Equals(path))
             {
                 await CheckStatus(httpContext);
-                return;
+                
             }
-            await _next(httpContext);
+            else
+            {
+                await _next(httpContext);
+            }            
         }
 
-        public Task CheckStatus(HttpContext httpContext)
+        private Task CheckStatus(HttpContext httpContext)
         {
-            var content = JsonConvert.SerializeObject("cup");
+            var content = JsonConvert.SerializeObject(new ServerStatus(httpContext.Response.StatusCode));          
             return httpContext.Response.WriteAsync(content);
+        }
+
+        public class ServerStatus
+        {
+           public ServerStatus(int Status)
+           {
+                HttpStatus = Status;
+           }
+           public int HttpStatus { get; }
         }
     }
 }

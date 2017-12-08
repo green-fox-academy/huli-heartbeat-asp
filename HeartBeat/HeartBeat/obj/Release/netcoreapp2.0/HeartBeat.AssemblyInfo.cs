@@ -11,7 +11,7 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("HeartBeat")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("HeartBeatbB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Package Description")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <PackageId>HeartBeatMiddleWare</PackageId>
+    <Authors>HeartBeatbyB</Authors>
+    <Company>HeartBeatbB</Company>
   </PropertyGroup>
 
   <ItemGroup>
