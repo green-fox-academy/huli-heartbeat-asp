@@ -22,27 +22,17 @@ namespace HeartBeat
             if (httpContext.Request.Path.Equals(path))
             {
                 await CheckStatus(httpContext);
-                
             }
             else
             {
                 await _next(httpContext);
-            }            
+            }
         }
 
         private Task CheckStatus(HttpContext httpContext)
         {
-            var content = JsonConvert.SerializeObject(new ServerStatus(httpContext.Response.StatusCode));          
+            var content = JsonConvert.SerializeObject(new ServerStatus(httpContext.Response.StatusCode));
             return httpContext.Response.WriteAsync(content);
-        }
-
-        public class ServerStatus
-        {
-           public ServerStatus(int Status)
-           {
-                HttpStatus = Status;
-           }
-           public int HttpStatus { get; }
         }
     }
 }
