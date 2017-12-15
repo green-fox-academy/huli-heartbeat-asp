@@ -29,7 +29,7 @@ namespace HeartBeat
             }
         }
 
-        private Task CheckStatus(HttpContext httpContext)
+        public Task CheckStatus(HttpContext httpContext)
         {
             var content = JsonConvert.SerializeObject(new ServerStatus(httpContext.Response.StatusCode));
             return httpContext.Response.WriteAsync(content);
