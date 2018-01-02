@@ -33,11 +33,12 @@ namespace HeartBeatTest
                 httpRequestMock.Setup(x => x.QueryString).Returns(new QueryString("?"));
             var httpContextMock = new Mock<HttpContext>();
                  httpContextMock.Setup(x => x.Request).Returns(httpRequestMock.Object);
-            var middlewareMock = new HeartBeatMiddleware(next: (innerHttpContext) => Task.FromResult(0));
+            var middlewareMock = new Mock<HeartBeatMiddleware>();
             //Act
             var result = httpRequestMock.Object.Path;
-            middlewareMock.Invoke(httpContextMock.Object).Wait();
+            //middlewareMock.Invoke(httpContextMock.Object).Wait();
             //Assert
+            middlewareMock.Verify(x => x.Invoke(httpContextMock.Object));
             Assert.Equal("/heartbeat", result);
 
 

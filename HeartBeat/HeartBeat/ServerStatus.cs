@@ -6,10 +6,12 @@ namespace HeartBeat
 {
     public class ServerStatus
     {
-        public ServerStatus(int Status)
+        public ServerStatus(int status, bool dbStatus)
         {
-            HttpStatus = Status;
+            HttpStatus = status;
+            DbStatus = dbStatus;
         }
         public int HttpStatus { get; }
+        public bool DbStatus { get; }
     }
 }
