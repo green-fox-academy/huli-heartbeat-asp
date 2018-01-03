@@ -1,13 +1,11 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 namespace HeartBeat
 {
     public static class HeartBeatMIddlewareExtension
     {
-        public static IApplicationBuilder UseHeartBeat(this IApplicationBuilder builder)
+        public static IApplicationBuilder UseHeartBeat(this IApplicationBuilder builder, DbContext dbContext)
         {
             return builder.UseMiddleware<HeartBeatMiddleware>();
         }
