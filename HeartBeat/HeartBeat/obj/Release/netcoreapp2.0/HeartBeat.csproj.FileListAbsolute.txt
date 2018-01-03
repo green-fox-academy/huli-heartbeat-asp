@@ -1,0 +1,3 @@
+C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\obj\Release\netcoreapp2.0\HeartBeat.csproj.CoreCompileInputs.cache
+C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\obj\Release\netcoreapp2.0\HeartBeat.AssemblyInfoInputs.cache
+C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\obj\Release\netcoreapp2.0\HeartBeat.AssemblyInfo.cs
