@@ -6,10 +6,11 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "HeartBeat/1.0.0": {
+      "HeartBeat/1.0.5": {
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics": "2.0.1",
           "Microsoft.AspNetCore.Mvc": "2.0.1",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1"
         },
         "runtime": {
@@ -1738,7 +1739,7 @@
     }
   },
   "libraries": {
-    "HeartBeat/1.0.0": {
+    "HeartBeat/1.0.5": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
