@@ -24,7 +24,6 @@ namespace HeartBeat
             if (httpContext.Request.Path.Equals(path))
             {
                 await CheckStatus(httpContext);
-                CheckDbStatus(connectionString);
             }
             else
             {
