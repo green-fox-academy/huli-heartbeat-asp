@@ -7,3 +7,12 @@ C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\obj\Deb
 C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\bin\Debug\netcoreapp2.0\HeartBeat.pdb
 C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\obj\Debug\netcoreapp2.0\HeartBeat.dll
 C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\obj\Debug\netcoreapp2.0\HeartBeat.pdb
+c:\Users\VatoLoco\heartbeat\huli-heartbeat-asp\HeartBeat\HeartBeat\bin\Debug\netcoreapp2.0\HeartBeat.deps.json
+c:\Users\VatoLoco\heartbeat\huli-heartbeat-asp\HeartBeat\HeartBeat\bin\Debug\netcoreapp2.0\HeartBeat.dll
+c:\Users\VatoLoco\heartbeat\huli-heartbeat-asp\HeartBeat\HeartBeat\bin\Debug\netcoreapp2.0\HeartBeat.pdb
+c:\Users\VatoLoco\heartbeat\huli-heartbeat-asp\HeartBeat\HeartBeat\obj\Debug\netcoreapp2.0\HeartBeat.csprojResolveAssemblyReference.cache
+c:\Users\VatoLoco\heartbeat\huli-heartbeat-asp\HeartBeat\HeartBeat\obj\Debug\netcoreapp2.0\HeartBeat.csproj.CoreCompileInputs.cache
+c:\Users\VatoLoco\heartbeat\huli-heartbeat-asp\HeartBeat\HeartBeat\obj\Debug\netcoreapp2.0\HeartBeat.AssemblyInfoInputs.cache
+c:\Users\VatoLoco\heartbeat\huli-heartbeat-asp\HeartBeat\HeartBeat\obj\Debug\netcoreapp2.0\HeartBeat.AssemblyInfo.cs
+c:\Users\VatoLoco\heartbeat\huli-heartbeat-asp\HeartBeat\HeartBeat\obj\Debug\netcoreapp2.0\HeartBeat.dll
+c:\Users\VatoLoco\heartbeat\huli-heartbeat-asp\HeartBeat\HeartBeat\obj\Debug\netcoreapp2.0\HeartBeat.pdb
