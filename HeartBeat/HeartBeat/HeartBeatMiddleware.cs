@@ -3,20 +3,20 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Data;
 using System.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace HeartBeat
 {
     public class HeartBeatMiddleware
     {
-        IDbConnection connection;
         private readonly RequestDelegate _next;
         private static readonly PathString path = new PathString("/heartbeat");
         private string connectionString;
 
-        public HeartBeatMiddleware(RequestDelegate next)
+        public HeartBeatMiddleware(RequestDelegate next, DbContext dbContext)
         {
             _next = next;
-            connectionString = connection.ConnectionString.ToString();
+            connectionString = dbContext.Database.GetDbConnection().ConnectionString;
         }
 
         public async Task Invoke(HttpContext httpContext, string connectionString)
@@ -48,14 +48,7 @@ namespace HeartBeat
                     command.CommandType = CommandType.Text;
                     command.CommandText = "SELECT 1";
                     var result = (bool)command.ExecuteScalar();
-                    if (result)
-                    {
-                        return result;
-                    }
-                    else
-                    {
-                        return result;
-                    }
+                    return result;
                 }
             }  
         }
