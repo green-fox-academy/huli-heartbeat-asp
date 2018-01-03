@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HeartBeat
 {
-    public static class HeartBeatMIddlewareExtension
+    public static class HeartBeatMiddlewareExtension
     {
         public static IApplicationBuilder UseHeartBeat(this IApplicationBuilder builder)
         {

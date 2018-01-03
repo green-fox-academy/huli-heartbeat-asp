@@ -1,24 +1,22 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Net;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace HeartBeat
 {
     public class HeartBeatMiddleware
     {
+        IDbConnection connection;
         private readonly RequestDelegate _next;
         private static readonly PathString path = new PathString("/heartbeat");
         private string connectionString;
 
-        public HeartBeatMiddleware(RequestDelegate next, string connectionString)
+        public HeartBeatMiddleware(RequestDelegate next)
         {
             _next = next;
-            connectionString = this.connectionString;
+            connectionString = connection.ConnectionString.ToString();
         }
 
         public async Task Invoke(HttpContext httpContext, string connectionString)
