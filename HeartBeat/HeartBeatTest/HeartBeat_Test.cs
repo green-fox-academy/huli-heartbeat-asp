@@ -1,8 +1,8 @@
-using HeartBeat;
 using Microsoft.AspNetCore.Http;
 using Moq;
 using System.IO;
 using Xunit;
+using HeartBeat;
 
 namespace HeartBeatTest
 {
@@ -22,11 +22,26 @@ namespace HeartBeatTest
                 httpRequestMock.Setup(x => x.QueryString).Returns(new QueryString("?"));
             var httpContextMock = new Mock<HttpContext>();
                  httpContextMock.Setup(x => x.Request).Returns(httpRequestMock.Object);
-            var middlewareMock = new Mock<HeartBeatMiddleware>();
             //Act
             var result = httpRequestMock.Object.Path;
             //Assert
             Assert.Equal("/heartbeat", result);
+        }
+
+        [Fact]
+        public void SqlQueryShouldReturnWithTrue()
+        {
+            bool result = ServerStatus.CheckDbStatus(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=test;Integrated Security=True;Connect Timeout=30;");
+
+            Assert.Equal(true, result);
+        }
+
+        [Fact]
+        public void SqlQueryShouldReturnWithFalse()
+        {
+            bool result = ServerStatus.CheckDbStatus(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=petike;Integrated Security=True;Connect Timeout=30;");
+
+            Assert.Equal(false, result);
         }
     }
 }
