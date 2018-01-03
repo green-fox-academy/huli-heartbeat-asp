@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace HeartBeat
+﻿namespace HeartBeat
 {
     public class ServerStatus
     {
