@@ -1,9 +1,0 @@
-C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\bin\Debug\netcoreapp2.0\HeartBeat.deps.json
-C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\bin\Debug\netcoreapp2.0\HeartBeat.dll
-C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\bin\Debug\netcoreapp2.0\HeartBeat.pdb
-C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\obj\Debug\netcoreapp2.0\HeartBeat.csprojResolveAssemblyReference.cache
-C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\obj\Debug\netcoreapp2.0\HeartBeat.csproj.CoreCompileInputs.cache
-C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\obj\Debug\netcoreapp2.0\HeartBeat.AssemblyInfoInputs.cache
-C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\obj\Debug\netcoreapp2.0\HeartBeat.AssemblyInfo.cs
-C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\obj\Debug\netcoreapp2.0\HeartBeat.dll
-C:\Users\Balazs\Huli\huli-heartbeat\huli-opertations\HeartBeat\HeartBeat\obj\Debug\netcoreapp2.0\HeartBeat.pdb
