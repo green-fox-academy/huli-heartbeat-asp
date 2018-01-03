@@ -6941,7 +6941,7 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "6qTwjO91tiu/m0EBjWEAWvLUe8yG8ltNDOZNnI1cuI3GQNRxItHLzDI/2HdkyPMlPwGpnHc7yV3myTh7fBHhfw==",
+      "sha512": "stXZ4Poirax98kzUHPNskmCkogT6BUY21LGzg7M+TJb6wzACbkJkxlPHBUPU9TgXs8LQ96tKLislMZckp1iw6w==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
@@ -8036,7 +8036,7 @@
       ]
     },
     "System.Xml.XmlDocument/4.3.0": {
-      "sha512": "n+8J76Zd2o2bfmf6vUa+zcEgVK7LAnIY6hbzbw4AFrTu9p37LLqgzJE65sYpdfjX0jaurNV879zvUeg3299+Kg==",
+      "sha512": "lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "type": "package",
       "path": "system.xml.xmldocument/4.3.0",
       "files": [
@@ -8157,8 +8157,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bonak\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Users\\Balazs\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -8167,20 +8166,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\bonak\\newfolder\\huli\\huli-heartbeat-asp\\HeartBeat\\HeartBeat\\HeartBeat.csproj",
-      "projectName": "HeartBeatMiddleWare",
-      "projectPath": "C:\\Users\\bonak\\newfolder\\huli\\huli-heartbeat-asp\\HeartBeat\\HeartBeat\\HeartBeat.csproj",
-      "packagesPath": "C:\\Users\\bonak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bonak\\newfolder\\huli\\huli-heartbeat-asp\\HeartBeat\\HeartBeat\\obj\\",
+      "projectUniqueName": "C:\\Users\\Balazs\\Huli\\huli-heartbeat\\huli-opertations\\HeartBeat\\HeartBeat\\HeartBeat.csproj",
+      "projectName": "HeartBeat",
+      "projectPath": "C:\\Users\\Balazs\\Huli\\huli-heartbeat\\huli-opertations\\HeartBeat\\HeartBeat\\HeartBeat.csproj",
+      "packagesPath": "C:\\Users\\Balazs\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Balazs\\Huli\\huli-heartbeat\\huli-opertations\\HeartBeat\\HeartBeat\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\bonak\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\Balazs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -8203,27 +8200,27 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "EntityFramework": {
-            "target": "Package",
-            "version": "[6.2.0, )"
-          },
           "Microsoft.AspNetCore.Diagnostics": {
             "target": "Package",
-            "version": "[2.0.1, )"
-          },
-          "Microsoft.AspNetCore.Mvc": {
-            "target": "Package",
-            "version": "[2.0.1, )"
-          },
-          "Microsoft.EntityFrameworkCore.SqlServer": {
-            "target": "Package",
-            "version": "[2.0.1, )"
+            "version": "2.0.1"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0.0",
             "autoReferenced": true
+          },
+          "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "2.0.1"
+          },
+          "Microsoft.AspNetCore.Mvc": {
+            "target": "Package",
+            "version": "2.0.1"
+          },
+          "EntityFramework": {
+            "target": "Package",
+            "version": "6.2.0"
           }
         },
         "imports": [

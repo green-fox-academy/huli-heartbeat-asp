@@ -1,19 +1,26 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "473c7c3f44917ba03f37304b9972dbc44b511492"
+    "signature": "48b8a3937f8d94f4c063a463d12af5969f2b8a7c"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "HeartBeat/1.0.0": {
         "dependencies": {
+          "EntityFramework": "6.2.0",
           "Microsoft.AspNetCore.Diagnostics": "2.0.1",
           "Microsoft.AspNetCore.Mvc": "2.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1"
         },
         "runtime": {
           "HeartBeat.dll": {}
+        }
+      },
+      "EntityFramework/6.2.0": {
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/2.0.1": {
@@ -1743,6 +1750,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "EntityFramework/6.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ptGyXOf26qLrtn+2doAmylIlCxOnBJANwlyyLrXDmqIk9O18IzLWHyxDwwAyhgXkxmbiaA0WNpRy67WRReInBw==",
+      "path": "entityframework/6.2.0",
+      "hashPath": "entityframework.6.2.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Antiforgery/2.0.1": {
       "type": "package",
       "serviceable": true,
@@ -2740,7 +2754,7 @@
     "System.Runtime.Serialization.Formatters/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6qTwjO91tiu/m0EBjWEAWvLUe8yG8ltNDOZNnI1cuI3GQNRxItHLzDI/2HdkyPMlPwGpnHc7yV3myTh7fBHhfw==",
+      "sha512": "sha512-stXZ4Poirax98kzUHPNskmCkogT6BUY21LGzg7M+TJb6wzACbkJkxlPHBUPU9TgXs8LQ96tKLislMZckp1iw6w==",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "hashPath": "system.runtime.serialization.formatters.4.3.0.nupkg.sha512"
     },
@@ -2915,7 +2929,7 @@
     "System.Xml.XmlDocument/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-n+8J76Zd2o2bfmf6vUa+zcEgVK7LAnIY6hbzbw4AFrTu9p37LLqgzJE65sYpdfjX0jaurNV879zvUeg3299+Kg==",
+      "sha512": "sha512-lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
