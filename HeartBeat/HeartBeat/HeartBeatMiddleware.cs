@@ -1,11 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Net;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace HeartBeat
 {
@@ -15,10 +13,10 @@ namespace HeartBeat
         private static readonly PathString path = new PathString("/heartbeat");
         private string connectionString;
 
-        public HeartBeatMiddleware(RequestDelegate next, string connectionString)
+        public HeartBeatMiddleware(RequestDelegate next, DbContext dbContext)
         {
             _next = next;
-            connectionString = this.connectionString;
+            connectionString = dbContext.Database.GetDbConnection().ConnectionString;
         }
 
         public async Task Invoke(HttpContext httpContext, string connectionString)
@@ -50,14 +48,7 @@ namespace HeartBeat
                     command.CommandType = CommandType.Text;
                     command.CommandText = "SELECT 1";
                     var result = (bool)command.ExecuteScalar();
-                    if (result)
-                    {
-                        return result;
-                    }
-                    else
-                    {
-                        return result;
-                    }
+                    return result;
                 }
             }  
         }
