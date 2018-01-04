@@ -1,7 +1,13 @@
 using HeartBeat;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using System.IO;
+using System.Net;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace HeartBeatTest
@@ -28,5 +34,22 @@ namespace HeartBeatTest
             //Assert
             Assert.Equal("/heartbeat", result);
         }
+
+        [Fact]
+        public async Task EmptyMiddleWareConstructorShouldReturnWithOKStatusCode()
+        {
+            var server = new TestServer(new WebHostBuilder().Configure(app => app.UseMiddleware<HeartBeatMiddleware>()));
+            var client = server.CreateClient();
+
+            var result = await client.GetAsync("/heartbeat");
+
+            Assert.Equal(HttpStatusCode.OK, result.StatusCode);
+        }
+
+        [Fact]
+        public async Task NotEmptyMiddleWareCtrShouldReturnWithFalseDbStatus()
+        {
+            //var server = new TestServer(new WebHostBuilder().ConfigureServices(Action())
+        }   
     }
 }
