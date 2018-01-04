@@ -37,6 +37,8 @@ namespace HeartBeat
         {
             var content = JsonConvert.SerializeObject(new ServerStatus(httpContext.Response.StatusCode, ServerStatus.CheckDbStatus(connectionString)));
             return httpContext.Response.WriteAsync(content);
+
+            //async-await
         }
     }
 }
