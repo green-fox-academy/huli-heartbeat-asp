@@ -20,11 +20,12 @@ namespace HeartBeatTest
         {
             services.AddMvc();
             services.AddDbContext<SimpleContext>(options
-                => options.UseInMemoryDatabase("testdatabase"));
+                => options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TestDatabaseForHeartBeat;Trusted_Connection=True;ConnectRetryCount=0"));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, SimpleContext context)
         {
+            context.Database.EnsureCreated();
             app.UseHeartBeat(context);
         }
     }
