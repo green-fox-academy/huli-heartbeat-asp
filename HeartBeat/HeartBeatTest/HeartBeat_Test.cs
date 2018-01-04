@@ -3,12 +3,18 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
+using System.Data;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 using Xunit;
+using System.Linq;
+using System;
+using System.Reflection;
+
 
 namespace HeartBeatTest
 {
@@ -38,7 +44,7 @@ namespace HeartBeatTest
         [Fact]
         public async Task EmptyMiddleWareConstructorShouldReturnWithOKStatusCode()
         {
-            var server = new TestServer(new WebHostBuilder().Configure(app => app.UseMiddleware<HeartBeatMiddleware>()));
+            var server = new TestServer(new WebHostBuilder().Configure(app => app.UseHeartBeat()));
             var client = server.CreateClient();
 
             var result = await client.GetAsync("/heartbeat");
@@ -47,9 +53,32 @@ namespace HeartBeatTest
         }
 
         [Fact]
-        public async Task NotEmptyMiddleWareCtrShouldReturnWithFalseDbStatus()
+        public async Task EmtpyStringMiddleWareConstructorShouldReturnWithFalseDbStatus()
         {
-            //var server = new TestServer(new WebHostBuilder().ConfigureServices(Action())
-        }   
+            var server = new TestServer(new WebHostBuilder().Configure(app => app.UseMiddleware<HeartBeatMiddleware>(string.Empty)));
+            var client = server.CreateClient();
+
+            var result = await client.GetStringAsync("/heartbeat");
+
+            Assert.Equal("{\"HttpStatus\":200,\"DbStatus\":false}", result);
+        }
+
+        [Fact]
+        public async Task FilledWithConnectionStringMiddleWareConstructorShouldReturnWithFalseDbStatus()
+        {
+            //var startup = new Startup();
+
+            //var webHostBuilder = new WebHostBuilder().ConfigureServices(options => options.AddDbContext<SimpleContext>(ops => ops.UseInMemoryDatabase("testdatabase")));
+
+            //webHostBuilder.Configure(app => app.UseHeartBeat(simpleContext));
+
+            var server = new TestServer(new WebHostBuilder().UseStartup<TestStartup>());
+
+            var client = server.CreateClient();
+
+            var result = await client.GetStringAsync("/heartbeat");
+
+            Assert.Equal("{\"HttpStatus\":200,\"DbStatus\":true}", result);
+        }
     }
 }
