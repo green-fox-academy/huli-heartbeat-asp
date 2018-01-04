@@ -5,13 +5,14 @@ namespace HeartBeat
 {
     public class ServerStatus
     {
+        public int HttpStatus;
+        public bool DbStatus;
+
         public ServerStatus(int status, bool dbStatus)
         {
             HttpStatus = status;
             DbStatus = dbStatus;
         }
-        public int HttpStatus { get; }
-        public bool DbStatus { get; }
 
         public static bool CheckDbStatus(string connectionString)
         {
