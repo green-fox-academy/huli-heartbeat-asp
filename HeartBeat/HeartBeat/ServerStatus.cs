@@ -21,7 +21,6 @@ namespace HeartBeat
                 using (var connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    System.Diagnostics.Debug.WriteLine(connection.Database.Length);
                     using (var command = connection.CreateCommand())
                     {
                         command.CommandType = CommandType.Text;
