@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 
 namespace HeartBeat
 {
@@ -9,8 +10,9 @@ namespace HeartBeat
             return builder.UseMiddleware<HeartBeatMiddleware>();
         }
 
-        public static IApplicationBuilder UseHeartBeat(this IApplicationBuilder builder, string connectionString)
+        public static IApplicationBuilder UseHeartBeat(this IApplicationBuilder builder, DbContext dbContext)
         {
+            string connectionString = dbContext.Database.GetDbConnection().ConnectionString;
             return builder.UseMiddleware<HeartBeatMiddleware>(connectionString);
         }
     }
