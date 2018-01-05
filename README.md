@@ -1,6 +1,6 @@
 # Huli-Heartbeat-asp
 
-'/heartbeat' endpoint which returns with a JSON. The response contains a http status code and a database connection status. If the dbstatus is true the database is connected, if false the connection is wrong or missing.
+'/heartbeat' endpoint which returns with a JSON. The response contains a http status code and a database connection status. If the dbstatus is true the database is connected, if false the connection is wrong or missing. Only works with .NET Core 2.0.1
 
 To install the heartbeat package you can either use the Nuget Package Manager or the Package Manager Console.
 
