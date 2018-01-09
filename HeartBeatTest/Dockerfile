@@ -10,6 +10,9 @@ RUN dotnet restore
 COPY . .
 WORKDIR /src/HeartBeatTest
 RUN dotnet build -c Release -o /app
+EXPOSE 80/tcp
+RUN chmod +x ./entrypoint.sh
+CMD /bin/bash ./entrypoint.sh
 
 FROM build AS publish
 RUN dotnet publish -c Release -o /app

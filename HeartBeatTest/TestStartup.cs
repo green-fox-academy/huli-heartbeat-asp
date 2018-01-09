@@ -20,7 +20,7 @@ namespace HeartBeatTest
         {
             services.AddMvc();
             services.AddDbContext<SimpleContext>(options
-                => options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TestDatabaseForHeartBeat;Trusted_Connection=True;ConnectRetryCount=0"));
+                => options.UseSqlServer(@"Server=db;Database=kikurtadatbazis;MultipleActiveResultSets=true;User=sa;Password=V4t0l0c0;"));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, SimpleContext context)
