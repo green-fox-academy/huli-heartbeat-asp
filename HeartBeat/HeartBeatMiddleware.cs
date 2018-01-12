@@ -35,7 +35,7 @@ namespace HeartBeat
 
         public Task CheckStatus(HttpContext httpContext)
         {
-            var content = JsonConvert.SerializeObject(new ServerStatus(httpContext.Response.StatusCode, ServerStatus.CheckDbStatus(connectionString)));
+            var content = JsonConvert.SerializeObject(new ServerStatus("OK", ServerStatus.CheckDbStatus(connectionString)));
             return httpContext.Response.WriteAsync(content);
         }
     }
