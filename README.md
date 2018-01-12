@@ -8,7 +8,7 @@ In the Nuget Package Manager search for the HeartBeatMW package.
 
 In the Package manager Console type in the following command:
 ```
-Install-Package HeartBeatMW -Version 1.0.6
+Install-Package HeartBeatMW -Version 1.0.7
 ```
 Next step is to add the HeartBeat Middleware to the StartUp.cs file
 
