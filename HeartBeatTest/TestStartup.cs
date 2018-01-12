@@ -20,12 +20,11 @@ namespace HeartBeatTest
         {
             services.AddMvc();
             services.AddDbContext<SimpleContext>(options
-                => options.UseSqlServer(@"Server=db;Database=kikurtadatbazis;MultipleActiveResultSets=true;User=sa;Password=V4t0l0c0;"));
+                => options.UseSqlServer(@"Server=localhost,1433;Database=master;User=sa;Password=V4t0l0c0;"));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, SimpleContext context)
         {
-            context.Database.EnsureCreated();
             app.UseHeartBeat(context);
         }
     }
