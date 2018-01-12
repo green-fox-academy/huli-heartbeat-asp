@@ -31,7 +31,7 @@ namespace HeartBeatTest
 
             var result = await client.GetStringAsync("/heartbeat");
 
-            Assert.Equal("{\"HttpStatus\":200,\"DbStatus\":false}", result);
+            Assert.Equal("{\"AppStatus\":\"OK\",\"DbStatus\":false}", result);
         }
 
         [Fact]
@@ -43,7 +43,7 @@ namespace HeartBeatTest
             
             var result = await client.GetStringAsync("/heartbeat");
 
-            Assert.Equal("{\"HttpStatus\":200,\"DbStatus\":true}", result);
+            Assert.Equal("{\"AppStatus\":\"OK\",\"DbStatus\":true}", result);
         }
     }
 }
